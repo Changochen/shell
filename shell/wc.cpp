@@ -6,7 +6,11 @@ int main(int argc,char** argv)
     int output[5]={0,0,0,0,0};//line,word,byte,character,max line
     unsigned int res[5]={0,0,0,0,0};
     int i=1;
+<<<<<<< HEAD
     for(;i!=argc;i++)//handle the argument blabla
+=======
+    for(;i!=argc;i++)//handle the argument
+>>>>>>> 47441c7ba34eca785e9b92ac4defb8f485b94d4d
     {
         int siz=strlen(argv[i]);
         if(argv[i][0]=='-'&&siz>=2)
