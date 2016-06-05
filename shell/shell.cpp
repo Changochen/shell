@@ -12,6 +12,7 @@ static void sig_int(int);
 
 int main()
 {
+    printf("welcome to can-do-nothin shell!\n");
     char buf[MAXLINE];
     pid_t pid;
     int status;
