@@ -1,4 +1,6 @@
 all: cp wc cmp shell
+	mkdir bin
+
 
 shell:
 	g++ ./source/shell.cpp -o shell
