@@ -58,8 +58,8 @@ int main()
         {
             char sys_call[MAXLINE];
             char temp[MAXLINE];
-            temp[0]='.';
-            temp[1]='/';
+            const char* dir="./bin/";//the directory which holds the executable files
+            strcpy(temp,dir);
             strcat(temp,buf);
             strcpy(buf,temp);
             char* program[MAXLINE];
@@ -81,7 +81,7 @@ int main()
                 program[i][k]=0;
                 if(count==siz)break;
             }
-            strcpy(sys_call,program[0]+2);
+            strcpy(sys_call,program[0]+strlen(dir));
             program[i+1]=(char*)0;
             if(execvp(program[0],program)==-1)//if not included in local command then invoke system command.
             {
