@@ -1,6 +1,4 @@
-all: cp wc cmp shell
-
-shell:
+shell: cp wc cmp
 	g++ ./source/shell.cpp -o shell
 
 cp:
@@ -13,4 +11,4 @@ cmp:
 	g++ ./source/cmp.cpp -o ./bin/cmp
 
 clean:
-	rm ./bin/*
+	rm ./bin/* shell

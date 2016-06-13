@@ -29,16 +29,13 @@ int main(int argc,char **argv)
     }
     fclose(dest);
     fclose(source);
-    struct stat sstat,dstat;
-    if(lstat(argv[2],&dstat)<0||lstat(argv[1],&sstat)<0)
+    struct stat sstat;
+    if(lstat(argv[1],&sstat)<0)
     {
         printf("Using default file access permission!\n");
     }
     else{
-        dstat.st_mode=sstat.st_mode;
-        printf("%d\n",sstat.st_mode&S_IXUSR);
-        printf("%d\n",dstat.st_mode&S_IXUSR);
-
+        chmod(argv[2],sstat.st_mode);
     }
     exit(0);
 }
