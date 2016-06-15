@@ -86,7 +86,6 @@ int main()
             if(execvp(program[0],program)==-1)//if not included in local command then invoke system command.
             {
                 program[0]=sys_call;
-                printf("%s\n",program[0]);
                 if(execvp(program[0],program)==-1)
                 printf("Error: unknown command %s\n",program[0]+2);
             }

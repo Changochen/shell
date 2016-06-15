@@ -1,11 +1,17 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
+#include<string.h>
 #include<stdlib.h>
 #include<sys/stat.h>
 #define BUFFSIZE 4096
 int main(int argc,char **argv)
 {
+    if(argc<3){
+        printf("Wrong usage of cp\nType 'man cp' to get help\n");
+        return -1;
+    }
+    if(strcmp(argv[1],argv[2]))return 0;
     int n;
     char buf[BUFFSIZE];
     FILE * source,*dest;
