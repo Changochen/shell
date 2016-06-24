@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
+#include<string.h>  //fdfkjsfksdafjfkdf
 int main(int argc,char** argv)
 {
     int output[5]={0,0,0,0,0};//line,word,byte,character,max line
